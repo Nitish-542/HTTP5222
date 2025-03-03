@@ -87,7 +87,22 @@ Make sure you have the following installed:
 1. Navigate to the homepage.
 2. Use the forms to add a new project or skill.
 3. The most recent project and skill will be displayed on the homepage after submission.
+Deployment
+Deploying to Render.com
+Push the code to GitHub.
 
+Deploy the app to Render:
+
+Go to Render.com.
+Create a new Web Service and link your GitHub repository.
+Choose Node.js as the environment and configure the build and start commands.
+Start Command: node index.js
+
+Build Command: npm install
+
+After the app is deployed, you can access it using the URL provided by Render. Example:
+
+App URL: https://http5222-s6v9.onrender.com/
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
