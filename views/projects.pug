@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    title Home - Project & Skill Manager
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/styles.css") 
+
+  body
+    .container.mt-5
+      header.text-center
+        h1.text-primary Welcome to Project & Skill Manager
+        p.lead Manage your projects and skills efficiently!
+
+      // Projects Section
+      .section
+        .d-flex.justify-content-between.align-items-center.mb-3
+          h2.text-secondary Project List
+          a.btn.btn-success(href="/add-project") ➕ Add Project  
+
+        ul.list-group
+          each project in projects
+            li.list-group-item
+              strong= project.title
+              p.mb-1 Description: #{project.description}
+              p.mb-1 Year: #{project.year}
+              if project.link
+                a.btn.btn-primary.btn-sm(href=project.link target="_blank") Visit Project
+
+    footer.text-center.mt-4
+        a.btn.btn-dark(href="/") Back

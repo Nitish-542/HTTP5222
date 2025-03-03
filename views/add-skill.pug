@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    title Home - Project & Skill Manager
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/styles.css") 
+
+  body
+    .container.mt-5
+      header.text-center
+        h1.text-primary Welcome to Project & Skill Manager
+        p.lead Manage your projects and skills efficiently!
+    .container.mt-4
+      header.text-center
+        h1.text-primary Add New Skill
+
+      form(action="/add-skill" method="POST" class="mt-4")
+        .mb-3
+          label.form-label(for="name") Skill Name:
+          input.form-control(type="text" id="name" name="name" required)
+
+        .mb-3
+          label.form-label(for="proficiency") Proficiency:
+          select.form-control(id="proficiency" name="proficiency" required)
+            option(value="Beginner") Beginner
+            option(value="Intermediate") Intermediate
+            option(value="Advanced") Advanced
+
+        .mb-3
+          label.form-label(for="category") Category:
+          input.form-control(type="text" id="category" name="category" placeholder="e.g. Frontend, Backend, Tools" required)
+
+        .mb-3
+          label.form-label(for="yearsExperience") Years of Experience:
+          input.form-control(type="number" id="yearsExperience" name="yearsExperience" required)
+
+        button.btn.btn-success(type="submit") ➕ Add Skill
+
+      footer.text-center.mt-4
+        a.btn.btn-dark(href="/") Back

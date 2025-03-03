@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+  head
+    title Home - Project & Skill Manager
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/styles.css") 
+
+  body
+    .container.mt-5
+      header.text-center
+        h1.text-primary Welcome to Project & Skill Manager
+        p.lead Manage your projects and skills efficiently!
+    .container.mt-4
+      header.text-center
+        h1.text-primary Add New Project
+
+      form(action="/add-project" method="POST" class="mt-4")
+        .mb-3
+          label.form-label(for="title") Project Title:
+          input.form-control(type="text" id="title" name="title" required)
+
+        .mb-3
+          label.form-label(for="description") Description:
+          textarea.form-control(id="description" name="description" rows="3" required)
+
+        .mb-3
+          label.form-label(for="year") Year:
+          input.form-control(type="number" id="year" name="year" required)
+
+        .mb-3
+          label.form-label(for="link") Project Link:
+          input.form-control(type="url" id="link" name="link")
+
+        button.btn.btn-success(type="submit") ➕ Add Project
+
+      footer.text-center.mt-4
+        a.btn.btn-dark(href="/") Back

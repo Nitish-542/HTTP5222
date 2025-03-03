@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+  head
+    title Home - Project & Skill Manager
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/styles.css") 
+
+  body
+    .container.mt-5
+      header.text-center
+        h1.text-primary Welcome to Project & Skill Manager
+        p.lead Manage your projects and skills efficiently!
+
+      .row.mt-5
+        // Projects Section
+        .col-md-6
+          .card.shadow-lg
+            .card-body.text-center
+              h2.text-secondary Projects
+              p View and manage your project portfolio.
+              a.btn.btn-primary(href="/project") 📂 View Projects
+              a.btn.btn-success.mt-2(href="/add-project") ➕ Add Project  
+              a.btn.btn-success.mt-2(href="/projects") Get Data IN JSOn
+
+        // Skills Section
+        .col-md-6
+          .card.shadow-lg
+            .card-body.text-center
+              h2.text-secondary Skills
+              p Track and improve your skills over time.
+              a.btn.btn-primary(href="/skill") 🎯 View Skills
+              a.btn.btn-success.mt-2(href="/add-skill") ➕ Add Skill
+              a.btn.btn-success.mt-2(href="/skills") Get Data IN JSOn
+  
+
+      // Footer
+      footer.text-center.mt-5
+        a.btn.btn-dark(href="/") Home
