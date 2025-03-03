@@ -91,18 +91,23 @@ Deployment
 Deploying to Render.com
 Push the code to GitHub.
 
-Deploy the app to Render:
+## Deployment
 
-Go to Render.com.
-Create a new Web Service and link your GitHub repository.
-Choose Node.js as the environment and configure the build and start commands.
-Start Command: node index.js
+### Deploying to Render.com
 
-Build Command: npm install
+1. **Push the code to GitHub**.
+2. **Deploy the app to Render**:
+   - Go to [Render.com](https://render.com).
+   - Create a new Web Service and link your GitHub repository.
+   - Choose **Node.js** as the environment and configure the build and start commands.
 
-After the app is deployed, you can access it using the URL provided by Render. Example:
+   **Start Command**: `node index.js`
+   
+   **Build Command**: `npm install`
 
-App URL: https://http5222-s6v9.onrender.com/
+3. After the app is deployed, you can access it using the URL provided by Render. Example:
+   - **App URL**: https://http5222-s6v9.onrender.com/
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
