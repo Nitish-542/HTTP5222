@@ -11,7 +11,7 @@ const contactDb = require("./modules/contact");  // Import contact.js
 
 const app = express();
 const port = process.env.PORT || "8888";
-
+app.use(cors());
 app.use(express.json());
 app.use(cors({ origin: 'http://localhost:5173', methods: ['GET', 'POST'] }));
 app.use(express.urlencoded({ extended: true }));
