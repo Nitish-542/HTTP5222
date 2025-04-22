@@ -12,13 +12,14 @@ const contactDb = require("./modules/contact");
 const app = express();
 const port = process.env.PORT || "8888";
 
-// ✅ Fixed: CORS middleware with allowed local Vite ports
+// ✅ Allow Vercel frontend + local dev ports
 app.use(
   cors({
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "http://localhost:5175"
+      "http://localhost:5175",
+      "https://portfolio-nitishs-projects-9d5521ae.vercel.app"
     ],
     methods: ["GET", "POST"],
     credentials: true,
